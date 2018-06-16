@@ -58,15 +58,41 @@ public class InsertionSort
 		
 		return numbers;
 	}
+	
+	/*
+	 *  Input: A sequence of n numbers A = {a1, a2, ...,an} and a value v.
+		Output: An index i such that v = A[i] or the special value NULL if v does not appear in A.
+	 */
+	public static int linearSearch(int[] numbers, int value)
+	{
+		int index = 0;
+		
+		while(index < numbers.length)
+		{
+			if(value == numbers[index])
+			{
+				break;
+			}
+			
+			index++;
+		}
+		
+		return index == numbers.length ? -1 : index;
+	}
 	public static void main(String[] args)
 	{
+//		int[] numbers = {5,2,4,6,1,3};
+//		
+//		numbers = sortDecreasingOrder(numbers);
+//		
+//		for(int i=0;i<numbers.length;i++)
+//		{
+//			System.out.print(numbers[i]+",");
+//		}
+		
 		int[] numbers = {5,2,4,6,1,3};
 		
-		numbers = sortDecreasingOrder(numbers);
+		System.out.println(linearSearch(numbers, 3));
 		
-		for(int i=0;i<numbers.length;i++)
-		{
-			System.out.print(numbers[i]+",");
-		}
 	}
 }
