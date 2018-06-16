@@ -1,8 +1,16 @@
 package com.practise.algorithms;
 
+/**
+ * 
+ * @author Suresh Malamanti
+ *
+ * Insertion sort elements like sorting hand of cards
+ * Time complexity O(n2)
+ */
 public class InsertionSort 
 {
 
+	
 	public static int[] sort(int[] array)
 	{
 		int j=0;
